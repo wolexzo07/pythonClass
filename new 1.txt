@@ -1,0 +1,34 @@
+===Requirements
+
+->TEXT EDITOR
+
+1. Notepad
+2. Notepad++
+2. vscode
+2. sublime Text
+2. Atom
+
+->IDE - INTEGRATED DEVELOPMENT ENVIRONMNET
+
+Thonny
+netbean
+pycharm
+
+
+-> Python compiler (Helps to run the python codes)
+
+
+=== For web development (flask / django framework)
+
+====DATA TYPES IN PYTHON
+
+- string  
+- int
+- float
+- list
+- tuple
+- dic
+- boolean
+
+
+=== 2 * x + y
