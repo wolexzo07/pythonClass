@@ -41,7 +41,8 @@ def accountNumber(username):
     
     else:
         return "No account number for " + username
-    
+
+
 def accountBalance(username):
 
          nameList = ["oluwole","ayo","wale"]
@@ -63,7 +64,31 @@ def accountBalance(username):
          else:
              
              return "No account balance for " + username
+         
 
+def getBalance(username):
+
+         nameList = ["oluwole","ayo","wale"]
+
+         balances = [100.89 , 200.76 , 400.98]
+
+         if(username == nameList[0]):
+             
+             return float(balances[0])
+             
+         elif(username == nameList[1]):
+             
+             return float(balances[1])
+         
+         elif(username == nameList[2]):
+             
+            return float(balances[2])
+         
+         else:
+             
+            return "No profile found"
+             
+    
 def myAccount(username):
 
         nameList = ["oluwole","ayo","wale"]
@@ -96,10 +121,47 @@ def myAccount(username):
              
              print("No profile")
 
+
+def addMoney(username , amount):
+      
+      nameList = ["oluwole","ayo","wale"]
     
+      balance = getBalance(username)
+
+      if(username == nameList[0]):
+        
+        return float(amount) + balance
+      
+      elif(username == nameList[1]):
+        
+        return float(amount) + balance
+      
+      elif(username == nameList[2]):
+        
+        return float(amount) + balance
+      
+      else:
+          
+          return "No account found"
+
+           
+
+addup = addMoney("ayo" , 1000)         
+print(addup)
+           
+
+          
 
 
+
+"""
 myAccount("oluwole")
 myAccount("ayo")
 myAccount("wale")
 myAccount("ojo")
+
+"""
+
+#print(getBalance("oluwole"))
+#print(getBalance("ayo"))
+#print(getBalance("ayo"))
