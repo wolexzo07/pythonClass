@@ -19,6 +19,29 @@ def accountName(username):
     else:
 
         return "No account name for " + username
+    
+    
+def accountNameRF(username):
+
+    fullname = ["Biobaku Oluwole","Ayodeji Peter","Wale Adeniji"]
+
+    nameList = ["oluwole","ayo","wale"]
+
+    if(username == nameList[0]):
+
+        return fullname[0]
+    
+    elif(username == nameList[1]):
+
+        return fullname[1]
+    
+    elif(username == nameList[2]):
+
+        return fullname[2]
+    
+    else:
+
+        return "nil"
 
 
 def accountNumber(username):
@@ -122,6 +145,31 @@ def myAccount(username):
              print("No profile")
 
 
+def removeMoney(username , amount):
+
+    nameList = ["oluwole","ayo","wale"]
+
+    balance = getBalance(username)
+
+    # checking if user have sufficient balance
+
+    if(balance < amount):
+
+        print("Oops::You have insufficient balance")
+    
+    else:
+
+        amountLeft = balance - float(amount)
+        acctName = accountNameRF(username)
+
+        print("========================")
+        print("Account Name               : ",acctName)
+        print("Withdrawal Amount          :  $" , float(amount))
+        print("Balance Before withdrawal  :  $" , float(balance))
+        print("Balance After withdrawal   :  $" , float(amountLeft))
+        print("========================")
+
+
 def addMoney(username , amount):
       
       nameList = ["oluwole","ayo","wale"]
@@ -146,8 +194,12 @@ def addMoney(username , amount):
 
            
 
-addup = addMoney("ayo" , 1000)         
-print(addup)
+addup = addMoney("ayo" , 100)  
+#print(addup)
+
+removeMoney("ayo" , 80.67)
+removeMoney("wale" , 40.89)
+removeMoney("oluwole" , 14.88)
            
 
           
