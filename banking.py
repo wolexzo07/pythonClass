@@ -192,14 +192,34 @@ def addMoney(username , amount):
           
           return "No account found"
 
+
+def getloanEligibility(user , noOfdays):
+
+    balance = getBalance(user)
+
+    loan = balance * 0.089 * 45000
+
+    if(noOfdays >= 361 and balance >= 20):
+
+        #response = "Eligible loan amount  = $ " , float(loan)
+
+        #return response
+
+        print("Eligible loan amount  = $" , loan)
+    
+    else:
+
+        print("you are not eligible")
+
+
            
 
-addup = addMoney("ayo" , 100)  
+#addup = addMoney("ayo" , 100)  
 #print(addup)
 
-removeMoney("ayo" , 80.67)
-removeMoney("wale" , 40.89)
-removeMoney("oluwole" , 14.88)
+#removeMoney("ayo" , 80.67)
+#removeMoney("wale" , 40.89)
+#removeMoney("oluwole" , 14.88)
            
 
           
@@ -217,3 +237,10 @@ myAccount("ojo")
 #print(getBalance("oluwole"))
 #print(getBalance("ayo"))
 #print(getBalance("ayo"))
+
+user = "oluwole"
+noOfdays = 361
+#loan = getloanEligibility(user , noOfdays)
+getloanEligibility(user , noOfdays)
+
+#print(loan)
